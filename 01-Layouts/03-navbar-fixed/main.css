@@ -1,5 +1,47 @@
-.container {
-  margin: 0 auto;  
-  width: 840px;
+header {
+	background-color: black;
+	width: 100%;
+	top: 0px;
+	position: fixed;
+	padding: 250px.
+}
+
+header h1{
+	line-height: 100px;
+	padding-left: 305px;
+
+}
+
+
+.nav-content h1{
+	color: white;
+	display: inline;
+}
+
+
+.nav-content a{
+	color: white;
+	margin-right: 50px;
+}
+
+.nav-content nav{
+	margin-left: 170px;
+}
+
+nav {
+	display: inline;
+}
+
+.content{
+	padding-top: 100px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.post {
+	width: 57%;
+	margin: 0 auto;
+}
+
+footer {
+	padding-left:310px;
 }
