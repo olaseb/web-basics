@@ -9,6 +9,8 @@ nav{
 	position: fixed;
 	float: left;
 	top: 120px;
+	width: 11%;
+	padding-right: 100px;
 }
 
 .content{
@@ -31,6 +33,14 @@ header h1{
 	font-size: 50px;
 }
 
+.post {
+	padding-left: 50px;
+	width: 100%;
+}
 
+.well {
+	height:200px;
+	padding:0px;
+}
 
 
