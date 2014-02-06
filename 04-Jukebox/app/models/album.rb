@@ -9,13 +9,17 @@ class Album
     @artist = args[:artist]
     @year = args[:year]
   end
-  
+
   def save
     $albums << self
   end
   
   def self.find(id)
     $albums[id]
+  end
+
+  def self.all
+    $albums
   end
   
   def update(args = {})

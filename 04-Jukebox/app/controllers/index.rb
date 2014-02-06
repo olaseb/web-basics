@@ -1,4 +1,6 @@
 get '/' do
+	@albums = Album.all
+
   erb :index
 end
 
@@ -7,13 +9,31 @@ get '/new' do
 end
 
 post '/' do
-  # Create a new album and add it to the $albums array 
-  # You should use only one parameter of the params hash named :album
-  # You should use only Album#new and Album#save
+
+	# On peut aussi faire : Album.new(params) Remplace ligne 12 à 22
+
+	@name = params[:name]
+	@artist = params[:artist]
+	@year = params[:year]
+
+  
+	album = Album.new({
+		name: @name,
+		artist: @artist,
+		year: @year
+	})
+
+	album.save
+
+  @albums = Album.all
+
   erb :index
 end
 
-get '/:id' do 
+get '/:id' do
+	id = params[:id].to_i
+
+	@album = Album.find(id)
   # Find the album with index :id and transmit it to the show view
   erb :show
 end
